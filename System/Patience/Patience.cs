@@ -1,8 +1,7 @@
 /*
  *************************************************************************
  * Patience: An extensible graphical card game system.                   *
- * Version 0.1.0 (13 January 2005)                                       *
- * Copyright (C) 2005 Trevor Barnett                                     *
+ * Copyright (C) 2003, 2005, 2015 Trevor Barnett <mr.ullet@gmail.com>    *
  *                                                                       *
  * This program is free software; you can redistribute it and/or modify  *
  * it under the terms of the GNU General Public License as published by  *
@@ -16,14 +15,8 @@
  *                                                                       *
  * You should have received a copy of the GNU General Public License     *
  * along with this program; if not, write to the Free Software           *
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
- * USA                                                                   *
- *************************************************************************
- * File:          Patience.cs                                            *
- * Namespace:     SwSt                                                   *
- * Class:         Patience                                               *
- * Last modified: 13 January  2005                                       *
- * Description:   An extensible graphical card game system.              *
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            * 
+ * MA 02110-1301 USA.                                                    *
  *************************************************************************
  */
         
@@ -550,16 +543,16 @@ namespace SwSt
                 Assembly.GetExecutingAssembly().GetName().Version.ToString(), 
                 "", -1, -1, 1, true); 
             dlgAbout.AddLine();
-            dlgAbout.AddLine("Copyright (C) 2005 Trevor Barnett", true);
+            dlgAbout.AddLine("Copyright (C) 2003, 2005, 2015 Trevor Barnett", true);
             dlgAbout.AddLine();
             dlgAbout.AddLine(
-                "email: swst@e381.net", 
-                "mailto:swst@e381.net",
-                7, 13, 1, true);
+                "email: mr.ullet@gmail.com",
+                "mailto:mr.ullet@gmail.com",
+                7, 18, 1, true);
             dlgAbout.AddLine(
-                "web: www.e381.net", 
-                "http://www.e381.net",
-                5, 12, 1, true);
+                "web: github.com/ullet/Patience",
+                "https://github.com/ullet/Patience",
+                5, 25, 1, true);
                 
             // Add lines about cardset formats
             PluginCardSetList a_CardSetFormats = new PluginCardSetList();

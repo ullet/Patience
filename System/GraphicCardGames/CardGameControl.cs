@@ -1,26 +1,10 @@
 /*
  *************************************************************************
- * Copyright (C) 2005 Trevor Barnett                                     *
- *                                                                       *
- * This program is free software; you can redistribute it and/or modify  *
- * it under the terms of the GNU General Public License as published by  *
- * the Free Software Foundation; either version 2 of the License, or     *
- * (at your option) any later version.                                   *
- *                                                                       *
- * This program is distributed in the hope that it will be useful,       *
- * but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- * GNU General Public License for more details.                          *
- *                                                                       *
- * You should have received a copy of the GNU General Public License     *
- * along with this program; if not, write to the Free Software           *
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
- * USA                                                                   *
- *************************************************************************
- * File:          CardGameControl.cs                                     *
- * Namespace:     SwSt.CardGames                                         *
- * Last modified: 13 January 2005                                        *
- * Description:   Card Game Control Interface and base class.            *
+ * Patience: An extensible graphical card game system.                   *
+ * Copyright (C) 2003, 2005, 2015 Trevor Barnett <mr.ullet@gmail.com>    *
+ *                                                                       * 
+ * Released under the terms of the GNU General Public License, version 2.*
+ * See file LICENSE for full details                                     *
  *************************************************************************
  */
  
@@ -267,39 +251,39 @@ namespace SwSt
             }
                                     
             protected override void OnResize(EventArgs ev)
-		    {
-		        if (this.Size.Width > 0 && this.Size.Height > 0)
-		        {
-		            if (m_bmpBuffer != null)
-		            {
-		                try
-		                {
-		                    m_bmpBuffer.Dispose();
-		                }
-		                catch{}
-		            }
-		            m_bmpBuffer = new Bitmap(this.Size.Width, this.Size.Height);
-		            if (this.Image != null)
-		            {
-		                try
-		                {
-		                    this.Image.Dispose();
-		                }
-		                catch{}
-		            }
-		            this.Image = null;
-		            
-		            this.Background.Size = this.Size;
-		           
-		        }
-		        base.OnResize(ev);
-		    }
-		    
-		    protected abstract void InitialiseZones();
-		    
-		    protected abstract void SetZones();
-		    
-		    protected void SetZone(CardTableZoneType type, CardTableRegion region, 
+            {
+                if (this.Size.Width > 0 && this.Size.Height > 0)
+                {
+                    if (m_bmpBuffer != null)
+                    {
+                        try
+                        {
+                            m_bmpBuffer.Dispose();
+                        }
+                        catch{}
+                    }
+                    m_bmpBuffer = new Bitmap(this.Size.Width, this.Size.Height);
+                    if (this.Image != null)
+                    {
+                        try
+                        {
+                            this.Image.Dispose();
+                        }
+                        catch{}
+                    }
+                    this.Image = null;
+                    
+                    this.Background.Size = this.Size;
+                   
+                }
+                base.OnResize(ev);
+            }
+            
+            protected abstract void InitialiseZones();
+            
+            protected abstract void SetZones();
+            
+            protected void SetZone(CardTableZoneType type, CardTableRegion region, 
                              int intX, int intY, int intWidth, int intHeight)
             {
                 CardTableZone objZone = this.Zones.GetZoneByTypeAndRegion(type, region);
@@ -311,14 +295,14 @@ namespace SwSt
                     objZone.Height = intHeight;
                 }
             }
-		    
-		    protected abstract void CalculateMaxCardSize();
-		    
-		    public virtual void LoadCardSet(string strPath)
-		    {
-		        this.CardSet.Load(strPath);
-		        
-		        // reset max card size
+            
+            protected abstract void CalculateMaxCardSize();
+            
+            public virtual void LoadCardSet(string strPath)
+            {
+                this.CardSet.Load(strPath);
+                
+                // reset max card size
                 CalculateMaxCardSize();
                     
                 // resize cards
@@ -331,15 +315,15 @@ namespace SwSt
                 catch
                 {
                 }
-		        
-		        CalculateLayoutValues();
-		        
-		        SetZones();
-		    }		        
-		    
-		    protected override void OnLayout(LayoutEventArgs lev)
-		    {
-		        // reset max card size
+                
+                CalculateLayoutValues();
+                
+                SetZones();
+            }		        
+            
+            protected override void OnLayout(LayoutEventArgs lev)
+            {
+                // reset max card size
                 CalculateMaxCardSize();
                     
                 // resize cards
@@ -352,39 +336,39 @@ namespace SwSt
                 catch
                 {
                 }
-		        
-		        CalculateLayoutValues();
-		        
-		        SetZones();
-		        
-		        base.OnLayout(lev);
-		    }
-		    
-		    public abstract string GameTitle
-		    {
-		        get;
-		    }
-		        
-		    protected abstract bool BackgroundChanged
-		    {
-		        get;
-		    }
-		        
-		    protected override void OnPaintBackground(PaintEventArgs pev)
-		    {
-		        this.SuspendLayout();
-    		    Graphics objGraphics = null;
-		        if (this.Image == null || BackgroundChanged)
-		        {
-		            objGraphics = Graphics.FromImage(m_bmpBuffer);
+                
+                CalculateLayoutValues();
+                
+                SetZones();
+                
+                base.OnLayout(lev);
+            }
+            
+            public abstract string GameTitle
+            {
+                get;
+            }
+                
+            protected abstract bool BackgroundChanged
+            {
+                get;
+            }
+                
+            protected override void OnPaintBackground(PaintEventArgs pev)
+            {
+                this.SuspendLayout();
+                Graphics objGraphics = null;
+                if (this.Image == null || BackgroundChanged)
+                {
+                    objGraphics = Graphics.FromImage(m_bmpBuffer);
                     DrawDisplay(objGraphics);
                     objGraphics.Dispose();
                     this.Image = (Image)m_bmpBuffer.Clone();
                 }
                 
                 if (this.Image != null)
-		        {
-		            objGraphics = Graphics.FromImage(this.Image);
+                {
+                    objGraphics = Graphics.FromImage(this.Image);
                     if (m_blnMoving)
                     {
                         RestoreBackground(objGraphics, pev.ClipRectangle);
@@ -397,51 +381,51 @@ namespace SwSt
                     DrawObjects(objGraphics);
                     objGraphics.Dispose();
                 }
-    		    this.ResumeLayout();
-    		    base.OnPaintBackground(pev);
-		    }
-		    
-		    protected abstract void CalculateLayoutValues();
-		    protected abstract void DrawDisplay(Graphics objGraphics);
-		    
-		    protected virtual void DrawObjects(Graphics objGraphics)
-		    {
-		        if (m_bmpPickedUpCards != null)
-		        {
-		            objGraphics.DrawImage(
-		                m_bmpPickedUpCards, m_FGRectangle.X, m_FGRectangle.Y);
-		        }
-		    }
-		    
-		    protected Bitmap PickedUpCards
-		    {
-		        get
-		        {
-		            return m_bmpPickedUpCards;
-		        }
-		        set
-		        {
-		            m_bmpPickedUpCards = value;
-		        }
-		    }
-		    
-		    protected virtual void RestoreBackground(
-		        Graphics objGraphics, Rectangle rec)
-		    {
-		        if (rec.X < 0 || rec.Y < 0)
-		        {
-		            // nothing to restore
-		            return;
-		        }
-		        
-		        // NB. more than twice as fast creating 'clone' of buffer bitmap
-		        // and then drawing to background instead of drawing buffer directly
-		        // to background using DrawImage(bmpBG, rec, rec, GraphicsUnit.Pixel)
-		        Bitmap bmpBG = m_bmpBuffer.Clone(rec, m_bmpBuffer.PixelFormat);
-		        objGraphics.DrawImage(bmpBG, rec.X, rec.Y);
-		    }
-		    
-		    protected virtual CardGame Game
+                this.ResumeLayout();
+                base.OnPaintBackground(pev);
+            }
+            
+            protected abstract void CalculateLayoutValues();
+            protected abstract void DrawDisplay(Graphics objGraphics);
+            
+            protected virtual void DrawObjects(Graphics objGraphics)
+            {
+                if (m_bmpPickedUpCards != null)
+                {
+                    objGraphics.DrawImage(
+                        m_bmpPickedUpCards, m_FGRectangle.X, m_FGRectangle.Y);
+                }
+            }
+            
+            protected Bitmap PickedUpCards
+            {
+                get
+                {
+                    return m_bmpPickedUpCards;
+                }
+                set
+                {
+                    m_bmpPickedUpCards = value;
+                }
+            }
+            
+            protected virtual void RestoreBackground(
+                Graphics objGraphics, Rectangle rec)
+            {
+                if (rec.X < 0 || rec.Y < 0)
+                {
+                    // nothing to restore
+                    return;
+                }
+                
+                // NB. more than twice as fast creating 'clone' of buffer bitmap
+                // and then drawing to background instead of drawing buffer directly
+                // to background using DrawImage(bmpBG, rec, rec, GraphicsUnit.Pixel)
+                Bitmap bmpBG = m_bmpBuffer.Clone(rec, m_bmpBuffer.PixelFormat);
+                objGraphics.DrawImage(bmpBG, rec.X, rec.Y);
+            }
+            
+            protected virtual CardGame Game
             {
                 get
                 {
@@ -667,8 +651,8 @@ namespace SwSt
             }
             
             //-----------------------------------------------------------------//
-		    
-		    protected Bitmap BufferBitmap
+            
+            protected Bitmap BufferBitmap
             {
                 get
                 {
@@ -685,20 +669,20 @@ namespace SwSt
             }
             
             //-----------------------------------------------------------------//
-		    
-		    protected abstract Bitmap PickUpCards(CardTableZone zoneFrom);
-		    
-		    protected abstract void MoveCard(
-		        CardTableZone zoneFrom, CardTableZone zoneTo);
-		    
-		    protected abstract void ReplaceCard(CardTableZone zoneFrom);
-		    
-		    protected virtual void GameWon()
-		    {
-		        m_Host.GameWon();
-		    }
-		    
-		    //-----------------------------------------------------------------//
+            
+            protected abstract Bitmap PickUpCards(CardTableZone zoneFrom);
+            
+            protected abstract void MoveCard(
+                CardTableZone zoneFrom, CardTableZone zoneTo);
+            
+            protected abstract void ReplaceCard(CardTableZone zoneFrom);
+            
+            protected virtual void GameWon()
+            {
+                m_Host.GameWon();
+            }
+            
+            //-----------------------------------------------------------------//
             // Mouse Event Handlers                                             //
             //-----------------------------------------------------------------//
             

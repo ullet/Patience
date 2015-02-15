@@ -1,8 +1,7 @@
 /*
  *************************************************************************
  * Patience: An extensible graphical card game system.                   *
- * Version 0.1.0 (13 January 2005)                                       *
- * Copyright (C) 2005 Trevor Barnett                                     *
+ * Copyright (C) 2003, 2005, 2015 Trevor Barnett <mr.ullet@gmail.com>    *
  *                                                                       *
  * This program is free software; you can redistribute it and/or modify  *
  * it under the terms of the GNU General Public License as published by  *
@@ -16,16 +15,12 @@
  *                                                                       *
  * You should have received a copy of the GNU General Public License     *
  * along with this program; if not, write to the Free Software           *
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
- * USA                                                                   *
- *************************************************************************
- * File:          AssemblyInfo.cs                                        *
- * Description:   Assembly Info for Patience.exe                         *
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,            * 
+ * MA 02110-1301 USA.                                                    *
  *************************************************************************
  */
- 
+
 using System.Reflection;
-using System.Runtime.CompilerServices;
 
 [assembly: AssemblyTitle("Patience")]
 [assembly: AssemblyDescription(
@@ -33,8 +28,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Patience")]
-[assembly: AssemblyCopyright("Copyright (C) 2005 Trevor Barnett")]
+[assembly: AssemblyCopyright("Copyright (C) 2003, 2005, 2015 Trevor Barnett")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-
-[assembly: AssemblyVersion("0.1.0")]
+[assembly: AssemblyVersion("0.1.1")]

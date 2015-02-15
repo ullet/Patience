@@ -1,27 +1,10 @@
 /*
  *************************************************************************
- * Copyright (C) 2005 Trevor Barnett                                     *
- *                                                                       *
- * This program is free software; you can redistribute it and/or modify  *
- * it under the terms of the GNU General Public License as published by  *
- * the Free Software Foundation; either version 2 of the License, or     *
- * (at your option) any later version.                                   *
- *                                                                       *
- * This program is distributed in the hope that it will be useful,       *
- * but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- * GNU General Public License for more details.                          *
- *                                                                       *
- * You should have received a copy of the GNU General Public License     *
- * along with this program; if not, write to the Free Software           *
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  *
- * USA                                                                   *
- *************************************************************************
- * File:          BeleagueredCastleControl.cs                            *
- * Namespace:     SwSt.CardGames                                         *
- * Last modified: 13 January 2005                                        *
- * Class:         BeleagueredCastleControl                               *
- * Description:   Beleaguered Castle card game control.                  *
+ * Patience: An extensible graphical card game system.                   *
+ * Copyright (C) 2003, 2005, 2015 Trevor Barnett <mr.ullet@gmail.com>    *
+ *                                                                       * 
+ * Released under the terms of the GNU General Public License, version 2.*
+ * See file LICENSE for full details                                     *
  *************************************************************************
  */
 
@@ -179,12 +162,12 @@ namespace SwSt
             }
             
             public override string GameTitle
-		    {
-		        get
-		        {
-		            return "Beleaguered Castle";
-		        }
-		    }
+            {
+                get
+                {
+                    return "Beleaguered Castle";
+                }
+            }
             
             public override bool AutoFinishAvailable
             {
@@ -270,7 +253,7 @@ namespace SwSt
             {
                 get
                 {
-                    return "Copyright (C) 2005 Trevor Barnett";
+                    return "Copyright (C) 2003, 2005, 2013 Trevor Barnett";
                 }
             }
             
@@ -280,7 +263,7 @@ namespace SwSt
             {
                 get
                 {
-                    return "http://www.e381.net";
+                    return "https://github.com/ullet/Patience";
                 }
             }
             
@@ -290,7 +273,7 @@ namespace SwSt
             {
                 get
                 {
-                    return "swst@e381.net";
+                    return "mr.ullet@gmail.com";
                 }
             }
             
@@ -644,7 +627,7 @@ namespace SwSt
                 // display rows
                 DrawRows(objGraphics);
                 
-        	} // end method
+            } // end method
             
             //-----------------------------------------------------------------//
             
