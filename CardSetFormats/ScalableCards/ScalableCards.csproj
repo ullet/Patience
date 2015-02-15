@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B6A88E0-3097-4A2B-B441-85B0D259914D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScalableCards</RootNamespace>
+    <AssemblyName>ScalableCards</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScalableCards.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\System\Cards\Cards.csproj">
+      <Project>{198fd330-62d2-4463-8076-d8c61104dc3b}</Project>
+      <Name>Cards</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\black10_0.png" />
+    <Content Include="Resources\black10_1.png" />
+    <Content Include="Resources\black10_2.png" />
+    <Content Include="Resources\black10_3.png" />
+    <Content Include="Resources\black10_4.png" />
+    <Content Include="Resources\black11_0.png" />
+    <Content Include="Resources\black11_1.png" />
+    <Content Include="Resources\black11_2.png" />
+    <Content Include="Resources\black11_3.png" />
+    <Content Include="Resources\black11_4.png" />
+    <Content Include="Resources\black12_0.png" />
+    <Content Include="Resources\black12_1.png" />
+    <Content Include="Resources\black12_2.png" />
+    <Content Include="Resources\black12_3.png" />
+    <Content Include="Resources\black12_4.png" />
+    <Content Include="Resources\black13_0.png" />
+    <Content Include="Resources\black13_1.png" />
+    <Content Include="Resources\black13_2.png" />
+    <Content Include="Resources\black13_3.png" />
+    <Content Include="Resources\black13_4.png" />
+    <Content Include="Resources\black1_0.png" />
+    <Content Include="Resources\black1_1.png" />
+    <Content Include="Resources\black1_2.png" />
+    <Content Include="Resources\black1_3.png" />
+    <Content Include="Resources\black1_4.png" />
+    <Content Include="Resources\black2_0.png" />
+    <Content Include="Resources\black2_1.png" />
+    <Content Include="Resources\black2_2.png" />
+    <Content Include="Resources\black2_3.png" />
+    <Content Include="Resources\black2_4.png" />
+    <Content Include="Resources\black3_0.png" />
+    <Content Include="Resources\black3_1.png" />
+    <Content Include="Resources\black3_2.png" />
+    <Content Include="Resources\black3_3.png" />
+    <Content Include="Resources\black3_4.png" />
+    <Content Include="Resources\black4_0.png" />
+    <Content Include="Resources\black4_1.png" />
+    <Content Include="Resources\black4_2.png" />
+    <Content Include="Resources\black4_3.png" />
+    <Content Include="Resources\black4_4.png" />
+    <Content Include="Resources\black5_0.png" />
+    <Content Include="Resources\black5_1.png" />
+    <Content Include="Resources\black5_2.png" />
+    <Content Include="Resources\black5_3.png" />
+    <Content Include="Resources\black5_4.png" />
+    <Content Include="Resources\black6_0.png" />
+    <Content Include="Resources\black6_1.png" />
+    <Content Include="Resources\black6_2.png" />
+    <Content Include="Resources\black6_3.png" />
+    <Content Include="Resources\black6_4.png" />
+    <Content Include="Resources\black7_0.png" />
+    <Content Include="Resources\black7_1.png" />
+    <Content Include="Resources\black7_2.png" />
+    <Content Include="Resources\black7_3.png" />
+    <Content Include="Resources\black7_4.png" />
+    <Content Include="Resources\black8_0.png" />
+    <Content Include="Resources\black8_1.png" />
+    <Content Include="Resources\black8_2.png" />
+    <Content Include="Resources\black8_3.png" />
+    <Content Include="Resources\black8_4.png" />
+    <Content Include="Resources\black9_0.png" />
+    <Content Include="Resources\black9_1.png" />
+    <Content Include="Resources\black9_2.png" />
+    <Content Include="Resources\black9_3.png" />
+    <Content Include="Resources\black9_4.png" />
+    <Content Include="Resources\Clubs_0.png" />
+    <Content Include="Resources\Clubs_1.png" />
+    <Content Include="Resources\Clubs_2.png" />
+    <Content Include="Resources\Clubs_3.png" />
+    <Content Include="Resources\Clubs_4.png" />
+    <Content Include="Resources\Clubs_5.png" />
+    <Content Include="Resources\Clubs_6.png" />
+    <Content Include="Resources\Clubs_7.png" />
+    <Content Include="Resources\Clubs_8.png" />
+    <Content Include="Resources\Diamonds_0.png" />
+    <Content Include="Resources\Diamonds_1.png" />
+    <Content Include="Resources\Diamonds_2.png" />
+    <Content Include="Resources\Diamonds_3.png" />
+    <Content Include="Resources\Diamonds_4.png" />
+    <Content Include="Resources\Diamonds_5.png" />
+    <Content Include="Resources\Diamonds_6.png" />
+    <Content Include="Resources\Diamonds_7.png" />
+    <Content Include="Resources\Diamonds_8.png" />
+    <Content Include="Resources\Hearts_0.png" />
+    <Content Include="Resources\Hearts_1.png" />
+    <Content Include="Resources\Hearts_2.png" />
+    <Content Include="Resources\Hearts_3.png" />
+    <Content Include="Resources\Hearts_4.png" />
+    <Content Include="Resources\Hearts_5.png" />
+    <Content Include="Resources\Hearts_6.png" />
+    <Content Include="Resources\Hearts_7.png" />
+    <Content Include="Resources\Hearts_8.png" />
+    <Content Include="Resources\jackClubs_0.png" />
+    <Content Include="Resources\jackClubs_1.png" />
+    <Content Include="Resources\jackClubs_2.png" />
+    <Content Include="Resources\jackClubs_3.png" />
+    <Content Include="Resources\jackClubs_4.png" />
+    <Content Include="Resources\jackClubs_5.png" />
+    <Content Include="Resources\jackClubs_6.png" />
+    <Content Include="Resources\jackClubs_7.png" />
+    <Content Include="Resources\jackDiamonds_0.png" />
+    <Content Include="Resources\jackDiamonds_1.png" />
+    <Content Include="Resources\jackDiamonds_2.png" />
+    <Content Include="Resources\jackDiamonds_3.png" />
+    <Content Include="Resources\jackDiamonds_4.png" />
+    <Content Include="Resources\jackDiamonds_5.png" />
+    <Content Include="Resources\jackDiamonds_6.png" />
+    <Content Include="Resources\jackDiamonds_7.png" />
+    <Content Include="Resources\jackHearts_0.png" />
+    <Content Include="Resources\jackHearts_1.png" />
+    <Content Include="Resources\jackHearts_2.png" />
+    <Content Include="Resources\jackHearts_3.png" />
+    <Content Include="Resources\jackHearts_4.png" />
+    <Content Include="Resources\jackHearts_5.png" />
+    <Content Include="Resources\jackHearts_6.png" />
+    <Content Include="Resources\jackHearts_7.png" />
+    <Content Include="Resources\jackSpades_0.png" />
+    <Content Include="Resources\jackSpades_1.png" />
+    <Content Include="Resources\jackSpades_2.png" />
+    <Content Include="Resources\jackSpades_3.png" />
+    <Content Include="Resources\jackSpades_4.png" />
+    <Content Include="Resources\jackSpades_5.png" />
+    <Content Include="Resources\jackSpades_6.png" />
+    <Content Include="Resources\jackSpades_7.png" />
+    <Content Include="Resources\kingClubs_0.png" />
+    <Content Include="Resources\kingClubs_1.png" />
+    <Content Include="Resources\kingClubs_2.png" />
+    <Content Include="Resources\kingClubs_3.png" />
+    <Content Include="Resources\kingClubs_4.png" />
+    <Content Include="Resources\kingClubs_5.png" />
+    <Content Include="Resources\kingClubs_6.png" />
+    <Content Include="Resources\kingClubs_7.png" />
+    <Content Include="Resources\kingDiamonds_0.png" />
+    <Content Include="Resources\kingDiamonds_1.png" />
+    <Content Include="Resources\kingDiamonds_2.png" />
+    <Content Include="Resources\kingDiamonds_3.png" />
+    <Content Include="Resources\kingDiamonds_4.png" />
+    <Content Include="Resources\kingDiamonds_5.png" />
+    <Content Include="Resources\kingDiamonds_6.png" />
+    <Content Include="Resources\kingDiamonds_7.png" />
+    <Content Include="Resources\kingHearts_0.png" />
+    <Content Include="Resources\kingHearts_1.png" />
+    <Content Include="Resources\kingHearts_2.png" />
+    <Content Include="Resources\kingHearts_3.png" />
+    <Content Include="Resources\kingHearts_4.png" />
+    <Content Include="Resources\kingHearts_5.png" />
+    <Content Include="Resources\kingHearts_6.png" />
+    <Content Include="Resources\kingHearts_7.png" />
+    <Content Include="Resources\kingSpades_0.png" />
+    <Content Include="Resources\kingSpades_1.png" />
+    <Content Include="Resources\kingSpades_2.png" />
+    <Content Include="Resources\kingSpades_3.png" />
+    <Content Include="Resources\kingSpades_4.png" />
+    <Content Include="Resources\kingSpades_5.png" />
+    <Content Include="Resources\kingSpades_6.png" />
+    <Content Include="Resources\kingSpades_7.png" />
+    <Content Include="Resources\queenClubs_0.png" />
+    <Content Include="Resources\queenClubs_1.png" />
+    <Content Include="Resources\queenClubs_2.png" />
+    <Content Include="Resources\queenClubs_3.png" />
+    <Content Include="Resources\queenClubs_4.png" />
+    <Content Include="Resources\queenClubs_5.png" />
+    <Content Include="Resources\queenClubs_6.png" />
+    <Content Include="Resources\queenClubs_7.png" />
+    <Content Include="Resources\queenDiamonds_0.png" />
+    <Content Include="Resources\queenDiamonds_1.png" />
+    <Content Include="Resources\queenDiamonds_2.png" />
+    <Content Include="Resources\queenDiamonds_3.png" />
+    <Content Include="Resources\queenDiamonds_4.png" />
+    <Content Include="Resources\queenDiamonds_5.png" />
+    <Content Include="Resources\queenDiamonds_6.png" />
+    <Content Include="Resources\queenDiamonds_7.png" />
+    <Content Include="Resources\queenHearts_0.png" />
+    <Content Include="Resources\queenHearts_1.png" />
+    <Content Include="Resources\queenHearts_2.png" />
+    <Content Include="Resources\queenHearts_3.png" />
+    <Content Include="Resources\queenHearts_4.png" />
+    <Content Include="Resources\queenHearts_5.png" />
+    <Content Include="Resources\queenHearts_6.png" />
+    <Content Include="Resources\queenHearts_7.png" />
+    <Content Include="Resources\queenSpades_0.png" />
+    <Content Include="Resources\queenSpades_1.png" />
+    <Content Include="Resources\queenSpades_2.png" />
+    <Content Include="Resources\queenSpades_3.png" />
+    <Content Include="Resources\queenSpades_4.png" />
+    <Content Include="Resources\queenSpades_5.png" />
+    <Content Include="Resources\queenSpades_6.png" />
+    <Content Include="Resources\queenSpades_7.png" />
+    <Content Include="Resources\red10_0.png" />
+    <Content Include="Resources\red10_1.png" />
+    <Content Include="Resources\red10_2.png" />
+    <Content Include="Resources\red10_3.png" />
+    <Content Include="Resources\red10_4.png" />
+    <Content Include="Resources\red11_0.png" />
+    <Content Include="Resources\red11_1.png" />
+    <Content Include="Resources\red11_2.png" />
+    <Content Include="Resources\red11_3.png" />
+    <Content Include="Resources\red11_4.png" />
+    <Content Include="Resources\red12_0.png" />
+    <Content Include="Resources\red12_1.png" />
+    <Content Include="Resources\red12_2.png" />
+    <Content Include="Resources\red12_3.png" />
+    <Content Include="Resources\red12_4.png" />
+    <Content Include="Resources\red13_0.png" />
+    <Content Include="Resources\red13_1.png" />
+    <Content Include="Resources\red13_2.png" />
+    <Content Include="Resources\red13_3.png" />
+    <Content Include="Resources\red13_4.png" />
+    <Content Include="Resources\red1_0.png" />
+    <Content Include="Resources\red1_1.png" />
+    <Content Include="Resources\red1_2.png" />
+    <Content Include="Resources\red1_3.png" />
+    <Content Include="Resources\red1_4.png" />
+    <Content Include="Resources\red2_0.png" />
+    <Content Include="Resources\red2_1.png" />
+    <Content Include="Resources\red2_2.png" />
+    <Content Include="Resources\red2_3.png" />
+    <Content Include="Resources\red2_4.png" />
+    <Content Include="Resources\red3_0.png" />
+    <Content Include="Resources\red3_1.png" />
+    <Content Include="Resources\red3_2.png" />
+    <Content Include="Resources\red3_3.png" />
+    <Content Include="Resources\red3_4.png" />
+    <Content Include="Resources\red4_0.png" />
+    <Content Include="Resources\red4_1.png" />
+    <Content Include="Resources\red4_2.png" />
+    <Content Include="Resources\red4_3.png" />
+    <Content Include="Resources\red4_4.png" />
+    <Content Include="Resources\red5_0.png" />
+    <Content Include="Resources\red5_1.png" />
+    <Content Include="Resources\red5_2.png" />
+    <Content Include="Resources\red5_3.png" />
+    <Content Include="Resources\red5_4.png" />
+    <Content Include="Resources\red6_0.png" />
+    <Content Include="Resources\red6_1.png" />
+    <Content Include="Resources\red6_2.png" />
+    <Content Include="Resources\red6_3.png" />
+    <Content Include="Resources\red6_4.png" />
+    <Content Include="Resources\red7_0.png" />
+    <Content Include="Resources\red7_1.png" />
+    <Content Include="Resources\red7_2.png" />
+    <Content Include="Resources\red7_3.png" />
+    <Content Include="Resources\red7_4.png" />
+    <Content Include="Resources\red8_0.png" />
+    <Content Include="Resources\red8_1.png" />
+    <Content Include="Resources\red8_2.png" />
+    <Content Include="Resources\red8_3.png" />
+    <Content Include="Resources\red8_4.png" />
+    <Content Include="Resources\red9_0.png" />
+    <Content Include="Resources\red9_1.png" />
+    <Content Include="Resources\red9_2.png" />
+    <Content Include="Resources\red9_3.png" />
+    <Content Include="Resources\red9_4.png" />
+    <Content Include="Resources\Spades_0.png" />
+    <Content Include="Resources\Spades_1.png" />
+    <Content Include="Resources\Spades_2.png" />
+    <Content Include="Resources\Spades_3.png" />
+    <Content Include="Resources\Spades_4.png" />
+    <Content Include="Resources\Spades_5.png" />
+    <Content Include="Resources\Spades_6.png" />
+    <Content Include="Resources\Spades_7.png" />
+    <Content Include="Resources\Spades_8.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) $(SolutionDir)bin\CardSetFormats\ /C /R /Y
+xcopy $(TargetPath) $(SolutionDir)System\Patience\bin\$(ConfigurationName)\\CardSetFormats\ /C /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

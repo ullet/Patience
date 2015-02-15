@@ -1,2 +1,0 @@
-@echo off
-csc /target:winexe /win32icon:cardgames.ico /lib:..\bin\ /r:Cards.dll;CardGames.dll;GraphicCardGames.dll /res:patience.resources /out:..\bin\Patience.exe Patience.cs AboutDialog.cs AssemblyInfo.cs
